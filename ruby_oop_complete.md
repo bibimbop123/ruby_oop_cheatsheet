@@ -13,6 +13,19 @@
 6. [Composition](#6-composition)
 7. [Putting It Together](#7-putting-it-together)
 
+  Objects & Classes: Objects are instances of classes, which define their structure and behavior.
+
+  Encapsulation: Hides internal data and exposes only controlled interfaces to interact with it.
+
+  Inheritance: Allows a class to inherit behavior and properties from another class.
+
+  Polymorphism: Lets objects respond to the same method in different ways depending on their class.
+
+  Abstraction: Focuses on exposing only essential features while hiding complex details.
+
+  Composition: Builds complex objects by combining simpler, reusable objects instead of using inheritance.
+
+  Putting It Together: OOP organizes code into modular, reusable, and maintainable units using these principles.
 ---
 
 # 1. Objects & Classes
