@@ -37,9 +37,9 @@ Now, let’s break it down by access level:
   These are like maintenance functions that only a technician (authorized personnel) can access using a special key or code.
   They can:
 
-  Refill snacks
-  Adjust pricing
-  Run diagnostics
+    Refill snacks
+    Adjust pricing
+    Run diagnostics
 
   ➡️ Protected = accessible to the object and its “subclasses” (like technicians who know the machine’s design).
   Not for the general public, but still available to those who inherit its structure or are trusted with special access.
