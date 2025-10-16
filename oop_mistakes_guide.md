@@ -142,9 +142,12 @@ user = User.new("Brian")  # ✅ constructor handles setup
 ### 6. Inheritance Abuse ("Everything is a subclass!")
 **Mistake:**
 ```ruby
-class Bird; end
-class Penguin < Bird; end
-class RobotPenguin < Penguin; end  # ❌ doesn’t fit real hierarchy
+class Bird;
+end
+class Penguin < Bird;
+end
+class RobotPenguin < Penguin;
+end  # ❌ doesn’t fit real hierarchy
 ```
 **Fix:** Prefer **composition**:
 ```ruby
@@ -239,9 +242,20 @@ end
 ```
 **Fix:**
 ```ruby
-class Shape; def draw; end; end
-class Circle < Shape; def draw; puts 'Drawing Circle'; end; end
-class Square < Shape; def draw; puts 'Drawing Square'; end; end
+class Shape
+  def draw
+  end
+end
+class Circle < Shape
+ def draw
+   puts 'Drawing Circle'
+ end;
+end
+class Square < Shape
+  def draw
+    puts 'Drawing Square'
+  end
+end
 ```
 **Why It’s Better:** Objects handle their own behavior — no `if` jungle.
 
@@ -272,15 +286,21 @@ end
 **Fix:**
 ```ruby
 class Payment
-  def pay; raise NotImplementedError; end
+  def pay
+    raise NotImplementedError;
+  end
 end
 
 class Paypal < Payment
-  def pay; puts 'Paying with PayPal'; end
+  def pay
+    puts 'Paying with PayPal'
+  end
 end
 
 class Stripe < Payment
-  def pay; puts 'Paying with Stripe'; end
+  def pay
+    puts 'Paying with Stripe'
+  end
 end
 ```
 **Principle:** Code should be open for extension, closed for modification.
@@ -315,7 +335,9 @@ end
 **Fix:** Extract shared behaviors into modules or strategy objects.
 ```ruby
 module Flyable
-  def fly; puts 'Flying!'; end
+  def fly
+   puts 'Flying!'
+  end
 end
 ```
 **Tip:** Mixins and interfaces reduce code duplication.
@@ -326,17 +348,24 @@ end
 **Mistake:**
 ```ruby
 class Game
-  def start; end
-  def save; end
-  def render; end
-  def score; end
+  def start
+  end
+  def save
+  end
+  def render
+  end
+  def score
+  end
 end
 ```
 **Fix:** Split into smaller classes:
 ```ruby
-class Renderer; end
-class ScoreTracker; end
-class GameEngine; end
+class Renderer
+end
+class ScoreTracker
+end
+class GameEngine
+end
 ```
 **Principle:** Each class should have **one reason to change.**
 
@@ -347,8 +376,15 @@ class GameEngine; end
 **Fix:** Learn patterns like **Strategy**, **Observer**, **Factory**, **Decorator**.
 **Example:**
 ```ruby
-class PaymentStrategy; def pay; end; end
-class CreditCardPayment < PaymentStrategy; def pay; puts 'Paid by card'; end; end
+class PaymentStrategy
+  def pay
+  end
+end
+class CreditCardPayment < PaymentStrategy
+  def pay
+    puts 'Paid by card'
+  end
+end
 ```
 **Lesson:** Patterns aren’t just theory — they prevent chaos in large systems.
 
