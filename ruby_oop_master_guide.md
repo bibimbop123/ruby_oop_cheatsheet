@@ -313,7 +313,8 @@ Concept:
 
 A mixin is what happens when you include or extend a module in a class.
 It’s how Ruby achieves multiple inheritance (getting behavior from more than one source) — something most languages restrict.
-```module Flyable
+```
+module Flyable
   def fly
     "Flying high!"
   end
@@ -321,7 +322,8 @@ end
 
 class Bird
   include Flyable
-end```
+end
+```
 
 Now Bird gains the fly ability without needing to inherit from another class.
 
