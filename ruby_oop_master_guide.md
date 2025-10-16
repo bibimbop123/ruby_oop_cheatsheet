@@ -6,9 +6,12 @@ This guide provides an in-depth explanation of the core Object-Oriented Programm
 
 ## 1. Encapsulation: Data Protection and Control
 
-**🧠 Analogy:** Encapsulation is like a **TV remote**. The buttons (public methods) are the only way to change the channel or volume. The internal circuitry (data/logic) is hidden from you and can only be changed by pressing those specific buttons.
+Encapsulation Analogy:
+Think of a vending machine. You interact with it through buttons and a coin slot — that’s the public interface. Inside, the machine contains complex circuits and inventory data — that’s the private state and logic. You can’t reach in and directly alter what’s inside; you must go through its defined interface.
 
-**Concept:** Encapsulation ensures a class's internal state (its data) can only be modified through its own public methods, preventing invalid or uncontrolled changes. It binds the data and the methods that operate on that data into a single unit (the class).
+Concept:
+Encapsulation in programming means binding data and methods together and restricting direct access to an object’s internal state. It enforces control over how data is modified, increases maintainability, and lets you change internal logic without breaking external code.
+
 ```ruby
 
 class BankAccount
