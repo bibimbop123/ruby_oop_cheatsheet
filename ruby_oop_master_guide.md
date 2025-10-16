@@ -9,6 +9,41 @@ This guide provides an in-depth explanation of the core Object-Oriented Programm
 Encapsulation Analogy:
 Think of a vending machine. You interact with it through buttons and a coin slot — that’s the public interface. Inside, the machine contains complex circuits and inventory data — that’s the private state and logic. You can’t reach in and directly alter what’s inside; you must go through its defined interface.
 
+Now, let’s break it down by access level:
+
+  🔓 Public
+
+  These are like the buttons, coin slot, and display screen on the vending machine.
+  Anyone can:
+
+    Insert coins
+    Select a product
+    See the price
+
+  ➡️ Public = accessible to everyone.
+  They’re the official ways to interact with the object.
+
+  🔒 Private
+
+  These are the internal mechanisms — the motors, sensors, and coin validation logic.
+  Only the machine itself can use or modify these directly.
+  You (the user) can’t open the casing or change how it calculates price or dispenses snacks.
+
+  ➡️ Private = internal to the object itself.
+  Used for sensitive operations or data you don’t want outsiders to touch.
+
+  🧰 Protected
+
+  These are like maintenance functions that only a technician (authorized personnel) can access using a special key or code.
+  They can:
+
+  Refill snacks
+  Adjust pricing
+  Run diagnostics
+
+  ➡️ Protected = accessible to the object and its “subclasses” (like technicians who know the machine’s design).
+  Not for the general public, but still available to those who inherit its structure or are trusted with special access.
+
 Concept:
 Encapsulation in programming means binding data and methods together and restricting direct access to an object’s internal state. It enforces control over how data is modified, increases maintainability, and lets you change internal logic without breaking external code.
 
