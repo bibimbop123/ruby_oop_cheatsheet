@@ -23,6 +23,23 @@ class Dog
   end
 end
 ```
+```
+class User
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def introduce
+    puts "Hi, I'm #{self.name}" # self is the instance
+  end
+end
+
+brian = User.new("Brian")
+brian.introduce
+# => "Hi, I'm Brian"
+```
 **Why It Happens:** Beginners often think writing `name = name` stores it, but it only creates a local variable.
 
 ---
