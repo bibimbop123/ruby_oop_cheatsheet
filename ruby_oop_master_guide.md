@@ -125,13 +125,13 @@ account1 = BankAccount.new("Alice", 1000)
 account2 = BankAccount.new("Bob", 500)
 
 
-account1.deposit(200) # ✅ Public method
-account1.withdraw(150) # ✅ Public method
-account1.transfer(300, account2) # ✅ Uses public and protected internally
+account1.deposit(200) #  Public method
+account1.withdraw(150) #  Public method
+account1.transfer(300, account2) #  Uses public and protected internally
 
 
-# account1.sufficient_funds?(50) # ❌ Error, private method
-# account1.owner # ❌ Error, protected method
+# account1.sufficient_funds?(50) # private method
+# account1.owner # protected method
 ```
 
 ---
