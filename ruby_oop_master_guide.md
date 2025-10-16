@@ -357,6 +357,7 @@ class Car
 end
 ```
 Car has an engine — not is a type of engine.
+
 ---
 ## Key Takeaways
 
